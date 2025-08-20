@@ -15,9 +15,8 @@ do
 done
 
 
-# PROJECT_PATH="C:/Users/g.georgariou/Documents/Visual Studio Code Projects/ZabbixDockersInit"
-# source "$PROJECT_PATH/lib/dockers_utils.sh"
-# delete_container "$container"
+source "$PROJECT_PATH/lib/dockers_utils.sh"
+delete_container "$container"
 
 
 # Run Docker

@@ -21,7 +21,7 @@ container_is_running(){
 delete_container(){
     $container=$1
 
-    if "$(container_is_running "my_container")";then
+    if "$(container_is_running $container)";then
         echo "Docker Container $container exists and is running!, Stop container"
         docker container stop $container
     fi
