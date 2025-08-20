@@ -7,16 +7,16 @@ source "$PROJECT_PATH/config.sh"
 source "$PROJECT_PATH/lib/dockers_utils.sh"
 
 # Print
-echo "$containers_volumes"
-echo "$containers_network"
+# echo "$containers_volumes"
+# echo "$containers_network"
 
-echo "$container_zabbix_mysql_server"
-
+# echo "$container_zabbix_mysql_server"
+# 
 echo "$PROJECT_PATH"
 
 
 source "$PROJECT_PATH/lib/dockers_utils.sh"
-delete_container "$container"
+# delete_container "$container"
 
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
 	-c "$container_zabbix_mysql_server" \
