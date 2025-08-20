@@ -15,7 +15,8 @@ do
 done
 
 
-source "$PROJECT_PATH/lib/dockers_utils.sh"
+source "~/test/ZabbixDockersInit/lib/dockers_utils.sh"
+# source "$PROJECT_PATH/lib/dockers_utils.sh"
 delete_container "$container"
 
 
