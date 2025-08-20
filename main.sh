@@ -15,7 +15,7 @@ source "$PROJECT_PATH/lib/dockers_utils.sh"
 echo "$PROJECT_PATH"
 
 
-source "$PROJECT_PATH/lib/dockers_utils.sh"
+. ./"$PROJECT_PATH/lib/dockers_utils.sh"
 # delete_container "$container"
 
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
