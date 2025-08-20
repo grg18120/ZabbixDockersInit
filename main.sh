@@ -15,6 +15,9 @@ echo "$container_zabbix_mysql_server"
 echo "$PROJECT_PATH"
 
 
+source "$PROJECT_PATH/lib/dockers_utils.sh"
+delete_container "$container"
+
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
 	-c "$container_zabbix_mysql_server" \
 	-d "$mysql_db_name" \
