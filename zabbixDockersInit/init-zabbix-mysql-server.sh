@@ -15,9 +15,12 @@ do
 done
 
 
-source "~/test/ZabbixDockersInit/lib/dockers_utils.sh"
-# source "$PROJECT_PATH/lib/dockers_utils.sh"
+PROJECT_PATH="$(pwd)"
+
+# source "~/test/ZabbixDockersInit/lib/dockers_utils.sh"
+source "$PROJECT_PATH/lib/dockers_utils.sh"
 delete_container "$container"
+
 
 
 # Run Docker
