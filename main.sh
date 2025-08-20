@@ -3,7 +3,7 @@
 PROJECT_PATH="$(pwd)"
 
 # Imports
-source "$PROJECT_PATH/config_my.sh"
+source "$PROJECT_PATH/config.sh"
 source "$PROJECT_PATH/lib/dockers_utils.sh"
 
 # Print
