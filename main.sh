@@ -15,7 +15,7 @@ echo "$container_zabbix_mysql_server"
 echo "$PROJECT_PATH"
 
 
-sh "$PROJECT_PATH/bin/otherBashScripts/init-$container_zabbix_mysql_server.sh"
+sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh"
 	-c "$container_zabbix_mysql_server" \
 	-d "$mysql_db_name" \
 	-r "$my_sql_root_pass" \
