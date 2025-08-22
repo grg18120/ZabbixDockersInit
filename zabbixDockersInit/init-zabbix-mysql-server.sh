@@ -16,10 +16,9 @@ do
 done
 
 
-echo "$project_path/lib/dockers_utils.sh"
-source "$project_path/lib/dockers_utils.sh"
 
-# delete_container "$container"
+source "$PROJECT_PATH/lib/dockers_utils.sh"
+delete_container "$container_zabbix_mysql_server"
 
 
 # Run Docker
