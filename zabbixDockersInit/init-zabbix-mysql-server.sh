@@ -15,8 +15,6 @@ do
     esac
 done
 
-echo "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysql\
-
 # Run Docker
 docker run --name $container -t \
   -v "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysql \

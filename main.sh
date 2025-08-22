@@ -6,14 +6,27 @@ source "$PROJECT_PATH/config.sh"
 source "$PROJECT_PATH/lib/dockers_utils.sh"
 
 
-echo "$PROJECT_PATH"
-
 # Dockers
+# ------------------- ZABBIX MYSQL SERVER ------------------- #
 delete_container "$container_zabbix_mysql_server"
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
     -x "$PROJECT_PATH" \
 	-c "$container_zabbix_mysql_server" \
 	-d "$mysql_db_name" \
+	-r "$my_sql_root_pass" \
+	-u "$mysql_user" \
+	-p "$mysql_user_pass" \
+	-v "$containers_volumes" \
+	-n "$containers_network"
+
+
+# ------------------- ZABBIX SERVER ------------------- #
+delete_container "$container_zabbix_server"
+sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_server.sh" \
+    -x "$PROJECT_PATH" \
+    -c "$container_zabbix_server" \
+    -m "$container_zabbix_mysql_server" \
+    -d "$mysql_db_name" \
 	-r "$my_sql_root_pass" \
 	-u "$mysql_user" \
 	-p "$mysql_user_pass" \

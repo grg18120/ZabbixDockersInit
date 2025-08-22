@@ -14,3 +14,7 @@ mysql_db_name="zabbixdb"
 my_sql_root_pass="SET_PASS_J8ct0kuxEJgRmaG"
 mysql_user="zabbixusr"
 mysql_user_pass="SET_PASS_PDjMeE9ngI9Rmxc"
+
+# Zabbix Server Config
+container_zabbix_server="zabbix-server"
+
