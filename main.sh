@@ -45,7 +45,7 @@ sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_agent.sh" \
 
 # ------------------- ZABBIX WEB INTERFACE NGX SERVER ------------------- #
 delete_container "$container_zabbix_web_ngx"
-bash "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_web_ngx.sh \
+bash "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_web_ngx.sh" \
     -x "$project_path" \
     -c "$container_zabbix_web_ngx" \
     -z "$container_zabbix_server" \
