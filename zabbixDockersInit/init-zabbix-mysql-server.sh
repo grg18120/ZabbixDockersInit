@@ -19,7 +19,7 @@ echo "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysq
 
 # Run Docker
 docker run --name $container -t \
-  -v "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysql\
+  -v "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysql \
   -e MYSQL_DATABASE="$mysql_db_name" \
   -e MYSQL_ROOT_PASSWORD="$my_sql_root_pass" \
   -e MYSQL_USER="$mysql_user" \
