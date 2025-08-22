@@ -18,3 +18,6 @@ mysql_user_pass="SET_PASS_PDjMeE9ngI9Rmxc"
 # Zabbix Server Config
 container_zabbix_server="zabbix-server"
 
+# Zabbix Agent Config
+container_zabbix_agent="zabbix-agent"
+

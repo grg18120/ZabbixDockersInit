@@ -5,7 +5,7 @@ while getopts x:c:d:r:u:p:v:n: flag
 do
     case "${flag}" in
 		  x) project_path=${OPTARG};;
-      	  c) container=${OPTARG};;
+      	  c) container_zabbix_mysql_server=${OPTARG};;
 		  d) mysql_db_name=${OPTARG};;
 		  r) my_sql_root_pass=${OPTARG};;
 		  u) mysql_user=${OPTARG};;
@@ -16,8 +16,8 @@ do
 done
 
 # Run Docker
-docker run --name $container -t \
-  -v "$project_path"/"$containers_volumes"/"$container"/mysqlfiles:/var/lib/mysql \
+docker run --name "$container_zabbix_mysql_server" -t \
+  -v "$project_path"/"$containers_volumes"/"$container_zabbix_mysql_server"/mysqlfiles:/var/lib/mysql \
   -e MYSQL_DATABASE="$mysql_db_name" \
   -e MYSQL_ROOT_PASSWORD="$my_sql_root_pass" \
   -e MYSQL_USER="$mysql_user" \

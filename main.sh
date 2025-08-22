@@ -33,5 +33,15 @@ sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_server.sh" \
 	-v "$containers_volumes" \
 	-n "$containers_network"
 
+# ------------------- ZABBIX AGENT ------------------- #
+delete_container "$container_zabbix_agent"
+sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_agent.sh" \
+    -x "$project_path" \
+    -c "$container_zabbix_agent" \
+    -z "$container_zabbix_server" \
+    -n "$containers_network"
+
+
+
 # Keep the terminal open until you press Enter
 read
