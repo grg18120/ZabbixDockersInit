@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Imports
-source "$PROJECT_PATH/config.sh"
+
 
 #"$(container_is_running "my_container")"
 container_is_running(){
@@ -36,4 +36,11 @@ dockers_scripts_permissions() {
 		chmod 777 $PROJECT_PATH/bin/otherBashScripts/init-$doc.sh
 		sed -i -e "s/\r$//" $PROJECT_PATH/bin/otherBashScripts/init-$doc.sh
 	done
+}
+
+
+test(){
+    echo "TEST HERE"
+    container=$1
+    echo "$container" 
 }
