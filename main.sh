@@ -1,14 +1,6 @@
 #!/bin/bash
 PROJECT_PATH="$(pwd)"
 
-# Imports
-source "$PROJECT_PATH/config.sh"
-source "$PROJECT_PATH/lib/dockers_utils.sh"
-
-
-# source "$PROJECT_PATH/lib/dockers_utils.sh"
-# delete_container "$container"
-# test "wdfww"
 
 
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \

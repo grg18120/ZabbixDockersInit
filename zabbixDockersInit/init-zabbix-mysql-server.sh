@@ -16,7 +16,7 @@ do
 done
 
 
-echo "$project_path/zabbixDockersInit/lib/dockers_utils.sh"
+echo "$project_path/lib/dockers_utils.sh"
 source "$project_path/lib/dockers_utils.sh"
 
 delete_container "$container"
