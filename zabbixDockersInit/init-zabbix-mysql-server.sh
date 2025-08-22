@@ -1,10 +1,10 @@
 #!/bin/bash 
 
 # Variables
-while getopts r:c:d:r:u:p:v:n: flag
+while getopts x:c:d:r:u:p:v:n: flag
 do
     case "${flag}" in
-		  r) project_path=${OPTARG};;
+		  x) project_path=${OPTARG};;
       	  c) container=${OPTARG};;
 		  d) mysql_db_name=${OPTARG};;
 		  r) my_sql_root_pass=${OPTARG};;
