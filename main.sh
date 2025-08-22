@@ -5,6 +5,9 @@ PROJECT_PATH="$(pwd)"
 source "$PROJECT_PATH/config.sh"
 source "$PROJECT_PATH/lib/dockers_utils.sh"
 
+
+echo "$PROJECT_PATH"
+
 # Dockers
 delete_container "$container_zabbix_mysql_server"
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
