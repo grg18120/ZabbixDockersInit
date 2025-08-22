@@ -1,7 +1,7 @@
 #!/bin/bash
 PROJECT_PATH="$(pwd)"
 
-
+source "$project_path/config.sh"
 
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
     -r "$PROJECT_PATH" \
