@@ -8,7 +8,7 @@ source "$PROJECT_PATH/lib/dockers_utils.sh"
 # Dockers
 delete_container "$container_zabbix_mysql_server"
 sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
-  -r "$PROJECT_PATH" \
+    -r "$PROJECT_PATH" \
 	-c "$container_zabbix_mysql_server" \
 	-d "$mysql_db_name" \
 	-r "$my_sql_root_pass" \
