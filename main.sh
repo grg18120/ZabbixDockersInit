@@ -48,7 +48,7 @@ delete_container "$container_zabbix_web_ngx"
 bash "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_web_ngx.sh \
     -x "$project_path" \
     -c "$container_zabbix_web_ngx" \
-    -z "$container_zabbix_server"
+    -z "$container_zabbix_server" \
     -m "$container_zabbix_mysql_server" \
     -d "$mysql_db_name" \
 	-r "$my_sql_root_pass" \
