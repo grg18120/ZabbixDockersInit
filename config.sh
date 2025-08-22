@@ -21,3 +21,6 @@ container_zabbix_server="zabbix-server"
 # Zabbix Agent Config
 container_zabbix_agent="zabbix-agent"
 
+# Nginx WEB  Server Config
+container_zabbix_web_ngx="zabbix-web-nginx"
+http_port=80
