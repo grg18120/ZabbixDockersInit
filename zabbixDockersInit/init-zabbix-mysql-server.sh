@@ -15,7 +15,10 @@ do
     esac
 done
 
+
+echo "$project_path/lib/dockers_utils.sh"
 source "$project_path/lib/dockers_utils.sh"
+
 delete_container "$container"
 
 

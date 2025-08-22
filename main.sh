@@ -1,18 +1,9 @@
 #!/bin/bash
-
 PROJECT_PATH="$(pwd)"
 
 # Imports
 source "$PROJECT_PATH/config.sh"
 source "$PROJECT_PATH/lib/dockers_utils.sh"
-
-# Print
-# echo "$containers_volumes"
-# echo "$containers_network"
-
-# echo "$container_zabbix_mysql_server"
-# 
-
 
 
 # source "$PROJECT_PATH/lib/dockers_utils.sh"

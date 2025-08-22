@@ -4,7 +4,7 @@
 
 
 # Containers
-containers_volumes="$PROJECT_PATH/containersVolumes"
+containers_volumes="containersVolumes"
 containers_network="zabbix-net"
 
 
