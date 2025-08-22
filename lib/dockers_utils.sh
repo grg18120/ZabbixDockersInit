@@ -17,17 +17,22 @@ container_is_running(){
     fi
 }
 
-#delete "my_container"
-delete_container(){
-    $container=$1
+delete_container() {
+    container=$1
 
-    if "$(container_is_running $container)";then
-        echo "Docker Container $container exists and is running!, Stop container"
-        docker container stop $container
+    if [ "$(docker ps -q -f name=^${container}$)" ]; then
+        echo "Docker Container $container is running! Stopping container..."
+        docker container stop "$container"
     fi
-    docker container rm $container
-    echo "Docker Container $container has been deleted"
+
+    if [ "$(docker ps -aq -f name=^${container}$)" ]; then
+        docker container rm "$container"
+        echo "Docker Container $container has been deleted"
+    else
+        echo "Docker Container $container does not exist"
+    fi
 }
+
 
 #dockers_scripts_permissions "${dockersList[@]}"
 dockers_scripts_permissions() {
