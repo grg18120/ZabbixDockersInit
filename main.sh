@@ -1,11 +1,16 @@
 #!/bin/bash
 PROJECT_PATH="$(pwd)"
 
-source "$project_path/config.sh"
+source "$PROJECT_PATH/config.sh"
+source "$PROJECT_PATH/lib/dockers_utils.sh"
 
-sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
-    -r "$PROJECT_PATH" \
-	-c "$container_zabbix_mysql_server" \    
+delete_container "$container_zabbix_mysql_server"
+
+
+
+# sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
+#     -r "$PROJECT_PATH" \
+# 	-c "$container_zabbix_mysql_server"
 
 # sh "$PROJECT_PATH/zabbixDockersInit/init-$container_zabbix_mysql_server.sh" \
 #   -r "$PROJECT_PATH" \
